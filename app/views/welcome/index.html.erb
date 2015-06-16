@@ -1,30 +1,65 @@
-Berlin Foodies Club
+<div id="main" class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Berlin Food Lovers</h1>
 
-Do you love trying out new food cuisines? If Yes
+        <p>
 
-Join Us
+        <h2>Its a online mobile communtiy of food enthusiasts based out of Berlin.
+          Here we share our experiences with various cuisines that Berlin has to offer</h2></p>
 
-Berlin Foodies CLub is a communtiy of food enthusiasts based out of berlin.
-Here we share our experiences with various cuisines that Berlin has to offer
+        <p>
 
-Food is a great way to discover Berlib's culture, have good conversations and develop new friendships especially for folks who are new to Berlin.
+        <h3>If you also love trying out new food cuisines</h3></p>
 
+        <form class="form-inline">
+          <div class="form-group">
+            <input type="email" class="form-control input-lg" id="exampleInputEmail2" placeholder="Your email id">
+          </div>
+          <button type="submit" class="btn btn-lg btn-primary">Join Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="features-container announcement">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>We are soon launching a mobile app for community members to let them share and learn more about food cuisines in Berlin.</h2>
+      </div>
+    </div>
+  </div>
+</div>
 
+<%= render partial: 'welcome/feature', locals: {left: true, classes: '', text: 'Find and Access Menu of all the restaurants in Berlin in one place.'} %>
+<%= render partial: 'welcome/feature', locals: {left: false, classes: 'green', text: 'Search a place by food and read their reviews'} %>
+<%= render partial: 'welcome/feature', locals: {left: true, classes: '', text: 'Access food cuisines shared by others daily right on your wall stream. Rate it or add it to your wishlist'} %>
+<%= render partial: 'welcome/feature', locals: {left: false, classes: 'blue', text: 'Share and Give reviews of what you have eaten today'} %>
+<%= render partial: 'welcome/feature', locals: {left: true, classes: '', text: ' Compare food dishes of one restaurant with other'} %>
 
-
-We are soon launching our app which will be focused on
-
-Finding menu of each and every restaurant of berlin
-
-Share your newly tried food when and where and how was it
-
-Rate and Create your wishlits of food dishes tried by other food enthuiasts
-
-Search restaurants by specific food items
-
-
-
-
-
-
+<div class="features-container signup">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form class="form-inline">
+          <div class="form-group">
+            <input type="email" class="form-control input-lg" id="exampleInputEmail2" placeholder="Your email id">
+          </div>
+          <button type="submit" class="btn btn-lg btn-primary">Join Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="features-container footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text">
+        Berlin Food Lovers 2015 | Impressum | Contact
+      </div>
+    </div>
+  </div>
+</div>

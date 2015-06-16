@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+
+  #main {
+    min-height: 700px;
+    color: #fff;
+    margin: 0;
+
+    .container {
+      margin-top: 150px;
+      h1 {
+        //font-family: 'Lobster', cursive;
+      }
+    }
+  }
+
+
+
+  .features-container {
+    color: #ffffff;
+
+    &.white {
+      color: #555 !important;
+      background-color: #ffffff !important;
+    }
+
+    &.yellow {
+      background-color: #f2992e;
+    }
+
+    &.blue {
+      background-color: #4aa8d8;
+    }
+
+    &.green {
+      background-color: #56bc8a;
+    }
+
+    &.announcement {
+      padding: 50px;
+      background-color: #d9576a;
+    }
+
+    &.signup {
+      padding: 50px;
+      background-color: #5f3dad;
+    }
+
+    &.footer {
+      padding: 15px;
+      background-color: #000;
+    }
+
+    text-align: center;
+    padding-top: 50px;
+    img {
+      width: 300px;
+    }
+
+    .col-md-6 {
+      display: table;
+      font-size: 32px;
+      height: 300px;
+      .content {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+}

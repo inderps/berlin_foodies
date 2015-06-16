@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery_ujs
+//= require backstretch.min.js
+//= require twitter/bootstrap
 //= require_tree .
+
+$(document).ready(function(){
+    $("#main").backstretch("/assets/food.jpg");
+});
