@@ -42,6 +42,18 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 
 namespace :deploy do
 
+  task :create_mysql_database do
+    ask :db_root_password, 'pandha123'
+    ask :db_name, 'berlin_foodies_production'
+    ask :db_user, 'berlin_foodies'
+    ask :db_pass, 'berlin_foodies'
+
+    on primary fetch(:migration_role) do
+      execute "mysql --user=root --password=#{fetch(:db_root_password)} -e \"CREATE DATABASE IF NOT EXISTS #{fetch(:db_name)}\""
+      execute "mysql --user=root --password=#{fetch(:db_root_password)} -e \"GRANT ALL PRIVILEGES ON #{fetch(:db_name)}.* TO '#{fetch(:db_user)}'@'localhost' IDENTIFIED BY '#{fetch(:db_pass)}' WITH GRANT OPTION\""
+    end
+  end
+
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
@@ -61,5 +73,7 @@ namespace :deploy do
   end
 
   after :finishing, 'deploy:cleanup'
+
+  before :migrate, :create_mysql_database
 
 end

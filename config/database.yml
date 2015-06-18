@@ -51,4 +51,4 @@ production:
   <<: *default
   database: berlin_foodies_production
   username: berlin_foodies
-  password: <%= ENV['BERLIN_FOODIES_DATABASE_PASSWORD'] %>
+  password: berlin_foodies
