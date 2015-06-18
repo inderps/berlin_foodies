@@ -11,6 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150617140055) do
+
+  create_table "invitations", force: :cascade do |t|
+    t.string "email", limit: 255
+  end
 
 end
